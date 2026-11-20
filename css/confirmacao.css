@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap');
+
+/* CONFIGURAÇÕES GERAIS */
+
+:root {
+    --bege: #f7f1e8;
+    --marrom: #665344;
+    --marrom-claro: #947b63;
+    --dourado: #b59675;
+    --borda: #d9c9b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bege);
+    color: var(--marrom);
+    min-height: 100vh;
+}
+
+/* ESTRUTURA PRINCIPAL */
+
+.container {
+    position: relative;
+    isolation: isolate;
+
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 75px 20px 50px;
+    overflow: hidden;
+}
+
+/* FOTO DESFOCADA SOMENTE NO TOPO */
+
+.container::before {
+    content: "";
+
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    right: -25px;
+    height: 440px;
+    z-index: -2;
+    background-position: center 38%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    filter: blur(20px);
+    opacity: 0.42;
+}
+
+/* DEGRADÊ DA FOTO PARA O BEGE */
+
+.container::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(to bottom,
+            rgba(247, 241, 232, 0.20) 0px,
+            rgba(247, 241, 232, 0.45) 140px,
+            rgba(247, 241, 232, 0.80) 290px,
+            #f7f1e8 410px,
+            #f7f1e8 100%);
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+    width: 100%;
+    max-width: 580px;
+    text-align: center;
+}
+
+/* TEXTO SUPERIOR */
+
+.subtitulo {
+    display: block;
+
+    color: var(--marrom-claro);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* NOMES DOS NOIVOS */
+
+.nomes {
+    font-family: 'Great Vibes', cursive;
+
+    font-size: clamp(54px, 8vw, 88px);
+    font-weight: 400;
+    line-height: 1.2;
+
+    margin: 28px 0 22px;
+
+    color: var(--marrom);
+}
+
+.nomes span {
+    color: var(--dourado);
+}
+
+/* FRASE BÍBLICA */
+
+.apresentacao {
+    max-width: 440px;
+
+    margin: 0 auto 38px;
+
+    font-size: 14px;
+    line-height: 1.9;
+    color: #806e60;
+}
+
+.versiculo {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: var(--marrom);
+}
+
+.versiculo span {
+    display: block;
+
+    margin-top: 12px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    color: var(--marrom-claro);
+}
+
+/* INFORMAÇÕES DO CASAMENTO */
+
+.detalhes {
+    padding: 32px 15px;
+
+    border-top: 1px solid var(--borda);
+    border-bottom: 1px solid var(--borda);
+}
+
+/* DATA */
+
+.data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.data span {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+
+    color: var(--marrom-claro);
+}
+
+.data strong {
+    font-family: Georgia, serif;
+    font-size: 78px;
+    font-weight: 400;
+    line-height: 1.1;
+
+    color: var(--marrom);
+}
+
+/* HORÁRIO */
+
+.horario {
+    margin: 20px 0 30px;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    color: var(--marrom-claro);
+}
+
+/* LOCAL */
+
+.local h2 {
+    font-size: 21px;
+    font-weight: 600;
+
+    margin-bottom: 12px;
+
+    color: var(--marrom);
+}
+
+.local p {
+    font-size: 13px;
+    line-height: 1.9;
+
+    color: #806e60;
+}
+
+/* BOTÃO DE LOCALIZAÇÃO */
+
+.mapa {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 11px 24px;
+
+    border: 1px solid #a78b70;
+    border-radius: 30px;
+
+    color: #786554;
+
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: background 0.3s, color 0.3s;
+}
+
+.mapa:hover {
+    background: #786554;
+    color: #fff;
+}
+
+/* CARD DE CONFIRMAÇÃO */
+
+.card {
+    margin-top: 40px;
+    padding: 35px 28px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid #e6dacf;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(90, 70, 50, 0.07);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    text-align: center;
+}
+
+/* CORAÇÃO */
+
+.icone {
+    display: block;
+
+    font-size: 29px;
+    color: var(--dourado);
+
+    margin-bottom: 12px;
+}
+
+/* TÍTULO DO FORMULÁRIO */
+
+.card h2 {
+    font-size: 23px;
+    font-weight: 600;
+
+    margin-bottom: 12px;
+
+    color: var(--marrom);
+}
+
+.card>p {
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: #806e60;
+
+    margin-bottom: 25px;
+}
+
+/* FORMULÁRIO */
+
+#formConfirmacao {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    text-align: left;
+}
+
+#formConfirmacao label {
+    font-size: 13px;
+    font-weight: 500;
+
+    color: var(--marrom);
+}
+
+/* CAMPO DE NOME */
+
+#formConfirmacao input {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #ded2c6;
+    border-radius: 8px;
+
+    background: #fff;
+    color: #252525;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    outline: none;
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#formConfirmacao input:focus {
+    border-color: var(--dourado);
+
+    box-shadow: 0 0 0 3px rgba(181, 150, 117, 0.20);
+}
+
+#formConfirmacao input::placeholder {
+    color: #aaa;
+}
+
+/* BOTÃO CONFIRMAR */
+
+#formConfirmacao button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #786554;
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.3s, transform 0.3s;
+}
+
+#formConfirmacao button:hover {
+    background: #5f4d3f;
+    transform: translateY(-2px);
+}
+
+#formConfirmacao button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* MENSAGEM DE CONFIRMAÇÃO */
+
+#mensagem {
+    margin-top: 18px;
+    margin-bottom: 0;
+
+    font-size: 14px;
+    line-height: 1.6;
+
+    color: var(--marrom);
+    overflow-wrap: anywhere;
+}
+
+#mensagem:empty {
+    display: none;
+}
+
+/* RODAPÉ */
+
+footer {
+    margin-top: 35px;
+
+    color: var(--marrom-claro);
+
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVIDADE - CELULAR */
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 65px 16px 35px;
+    }
+
+    .container::before {
+        height: 370px;
+        background-position: center 35%;
+        filter: blur(22px);
+        opacity: 0.40;
+    }
+
+    .container::after {
+        background: linear-gradient(to bottom,
+                rgba(247, 241, 232, 0.20) 0px,
+                rgba(247, 241, 232, 0.60) 150px,
+                #f7f1e8 350px,
+                #f7f1e8 100%);
+    }
+
+    .subtitulo {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .nomes {
+        font-size: clamp(48px, 12vw, 65px);
+        margin: 24px 0 18px;
+    }
+
+    .apresentacao {
+        font-size: 13px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+    }
+
+    .versiculo {
+        font-size: 16px;
+    }
+
+    .detalhes {
+        padding: 28px 10px;
+    }
+
+    .data strong {
+        font-size: 68px;
+    }
+
+    .horario {
+        font-size: 16px;
+    }
+
+    .local h2 {
+        font-size: 19px;
+    }
+
+    .local p {
+        font-size: 12px;
+    }
+
+    .card {
+        margin-top: 30px;
+        padding: 28px 20px;
+    }
+
+    .card h2 {
+        font-size: 21px;
+    }
+
+    footer {
+        font-size: 11px;
+    }
+}
+
+/* ACESSIBILIDADE */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    button,
+    a,
+    input {
+        transition: none !important;
+    }
+}

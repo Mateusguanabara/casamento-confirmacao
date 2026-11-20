@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f5f5f7;
+    color: #252525;
+    min-height: 100vh;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* LOGIN */
+
+.login {
+    width: 90%;
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 35px 25px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.login h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.login p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+#form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#form-login input {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+}
+
+#form-login input:focus {
+    border-color: #333;
+}
+
+button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #252525;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+#erro-login {
+    color: #d93025;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+/* PAINEL */
+
+#painel {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+#sair {
+    background: #e8e8e8;
+    color: #333;
+}
+
+.resumo {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+}
+
+.resumo h2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #777;
+}
+
+.resumo strong {
+    display: block;
+    font-size: 42px;
+    margin-top: 10px;
+}
+
+/* LISTA DE CONVIDADOS */
+
+.convidados {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.convidados h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+#lista-convidados {
+    list-style: none;
+}
+
+#lista-convidados li {
+    padding: 15px 5px;
+    border-bottom: 1px solid #eee;
+    font-size: 15px;
+}
+
+#lista-convidados li:last-child {
+    border-bottom: none;
+}
+
+#mensagem-lista {
+    color: #888;
+    font-size: 14px;
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .login {
+        margin: 70px auto;
+    }
+
+    #painel {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 19px;
+    }
+
+    .resumo,
+    .convidados {
+        padding: 20px;
+    }
+
+    .resumo strong {
+        font-size: 38px;
+    }
+}
+
+[hidden] {
+    display: none !important;
+}
+
+
+/* MELHORIAS DO PAINEL */
+
+#lista-convidados li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    overflow-wrap: anywhere;
+}
+
+#lista-convidados li strong {
+    font-size: 15px;
+    font-weight: 600;
+    color: #252525;
+}
+
+#lista-convidados li small {
+    font-size: 12px;
+    color: #888;
+}
+
+#sair {
+    flex-shrink: 0;
+    transition: background 0.2s;
+}
+
+#sair:hover {
+    background: #d8d8d8;
+}
+
+#form-login input {
+    width: 100%;
+    min-width: 0;
+}
+
+@media (max-width: 600px) {
+    header {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    header h1 {
+        font-size: 19px;
+        line-height: 1.3;
+    }
+
+    #sair {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .convidados h2 {
+        font-size: 17px;
+    }
+
+    #lista-convidados li {
+        padding: 14px 0;
+    }
+}

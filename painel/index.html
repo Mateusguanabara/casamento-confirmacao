@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel dos Noivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Área de login -->
+    <section id="login" class="login">
+        <h1>Painel dos Noivos</h1>
+        <p>Entre para visualizar as confirmações.</p>
+
+        <form id="form-login">
+            <input type="email" id="email" placeholder="Seu e-mail" required>
+
+            <input type="password" id="senha" placeholder="Sua senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+
+        <p id="erro-login" role="alert"></p>
+    </section>
+
+    <!-- Painel privado -->
+    <main id="painel" hidden>
+
+        <header>
+            <h1>Confirmações de Presença</h1>
+            <button id="sair">Sair</button>
+        </header>
+
+        <section class="resumo">
+            <h2>Total de confirmados</h2>
+            <strong id="total">0</strong>
+        </section>
+
+        <section class="convidados">
+            <h2>Lista de convidados</h2>
+            <ul id="lista-convidados"></ul>
+            <p id="mensagem-lista">Carregando confirmações...</p>
+        </section>
+
+    </main>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>

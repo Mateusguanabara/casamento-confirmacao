@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lara & João Gabriel | Confirmação de Presença</title>
+
+    <link rel="stylesheet" href="css/confirmacao.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="conteudo">
+
+            <span class="subtitulo">
+                O NOSSO GRANDE DIA
+            </span>
+
+            <h1 class="nomes">
+                Lara <span>&</span> João Gabriel
+            </h1>
+
+            <p class="apresentacao versiculo">
+                “O amor é paciente, o amor é bondoso.”
+                <span>1 Coríntios 13:4</span>
+            </p>
+
+            
+            <section class="card">
+
+                <span class="icone">♥</span>
+
+                <h2>Confirme sua presença</h2>
+
+                <p>
+                    Sua presença tornará esse dia
+                    ainda mais especial!
+                </p>
+
+                <form id="formConfirmacao">
+
+                    <label for="nome">
+                        Nome completo
+                    </label>
+
+                    <input type="text" id="nome" placeholder="Digite seu nome completo" minlength="3" maxlength="100"
+                        required>
+
+                    <button type="submit">
+                        Confirmar presença
+                    </button>
+
+                </form>
+
+                <p id="mensagem" role="status"></p>
+
+            </section>
+
+            <footer>
+                Lara & João Gabriel ♥ 06.02.2027
+            </footer>
+
+        </div>
+
+    </main>
+
+    <script type="module" src="./js/confirmacao.js"></script>
+
+</body>
+
+</html>
